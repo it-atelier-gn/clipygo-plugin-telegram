@@ -1,0 +1,19 @@
+[package]
+name = "clipygo-plugin-telegram"
+version = "0.1.0"
+edition = "2021"
+description = "Telegram target provider for clipygo"
+authors = ["Georg Nelles"]
+license = "MIT"
+repository = "https://github.com/it-atelier-gn/clipygo-plugin-telegram"
+
+[[bin]]
+name = "clipygo-plugin-telegram"
+path = "src/main.rs"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "json", "multipart", "rustls-tls"] }
+dirs = "6"
+base64 = "0.22"
